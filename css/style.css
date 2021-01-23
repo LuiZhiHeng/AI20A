@@ -1,0 +1,654 @@
+    
+    /*
+        &lt;&gt;
+    */
+
+
+    /** Main Style **/
+
+    @font-face {
+        font-family: Gabriola;
+        src: url('font/Gabriola.woff') format('woff'), 
+             url('font/Gabriola.ttf') format('truetype');
+    }
+
+    * {
+        margin: 0;
+        padding: 0;        
+    }
+
+    body {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 1em;
+        background-color: rgb(255, 254, 248);
+        background-image: url('../img/bg.jpg');
+        background-size: 200px;
+    }
+
+
+
+
+
+    /** Header Style  **/
+
+    header {
+        background-color: rgb(53, 26, 98);
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        z-index: 520;
+    }
+
+    header nav {
+        position: relative;
+        top: 15px;
+        font-weight: bold;
+    }
+
+    header nav ul li{
+        display: inline-block;
+        list-style-type: none;
+    }
+
+    header nav ul li a {
+        color: rgba(245, 245, 245, 0.952);
+        text-decoration: none;
+        padding: 16px 12px;
+    }
+
+    header nav ul li a:hover {
+        color: rgba(29, 29, 29, 0.966);
+        animation: ani-nav 0.5s forwards;
+    }
+
+    @keyframes ani-nav {
+        from {
+            background-color: rgb(53, 26, 98);
+        } to {
+            background-color: rgba(105, 184, 233, 0.966);
+        }
+    }
+
+
+
+
+
+   /** Footer Style **/
+
+   footer {
+        background-color: rgb(53, 26, 98);
+        color: rgba(245, 245, 245, 0.952);
+        font-size: 0.8em;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+
+
+
+
+    /** Section Style  **/
+
+    section {
+        background-color: rgb(177, 215, 241);
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+        padding-top: 50px;
+        box-shadow: 0px 0px 15px 10px rgba(207, 207, 207, 0.65);
+        box-shadow: inset 0px 0px 5px 0.5px rgba(13, 223, 255, 0.68);
+        z-index: -10;
+        overflow: hidden;
+    }
+
+
+
+
+
+
+    /** Article Style **/
+
+    article {
+        padding: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.8em;
+        text-align: justify;
+        line-height: 1.5em;
+    }
+
+    .tab {
+        text-indent: 20px;
+        padding-left: 0px;
+    }
+
+    h2, h3 {
+        text-align: center;
+        padding: 10px 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-top: 1px solid rgb(66, 44, 120);
+        border-bottom: 1px solid rgb(66, 44, 120);
+        color: rgb(242, 253, 255);
+        background-color : rgb(73, 38, 162);
+        border-radius: 20px;
+    }
+
+    h4 {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    section#step h4 {
+        text-align: center;
+        padding-top: 10px;
+        border-top: 1px solid rgb(118, 92, 182);
+        border-bottom: 1px solid rgb(118, 92, 182);
+        color: rgb(255, 255, 255);
+        background-color : rgb(73, 38, 162);
+        box-shadow: 0px 0px 4px 2px rgb(242, 248, 222);
+    }
+    
+    p {
+        color: black;
+    }
+
+    article p, article#ol-html5 ol {
+        padding: 20px;
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+    .tab2 {
+        text-indent: 20px;
+    }
+
+    .bb {
+        border: 1.5px solid rgb(184, 54, 49);
+        padding: 7px 14px;
+        margin: 0 20px;
+        margin-bottom: 15px;
+        background-color: rgb(255, 227, 134);
+        color: rgb(59, 11, 81);
+        box-shadow: 3px 4px 5px gray;
+    }
+
+    article#ol-html5 ol {
+        list-style-position: inside;
+        color: rgb(73, 52, 125);
+        font-weight: bold;
+    }
+
+    article#ol-html5 ol li {
+        margin-bottom: 5px;
+        padding: 5px;
+        padding-top: 20px;
+        border-radius: 15px;
+        border-bottom: 3px solid rgb(66, 44, 120);
+        border-left: 3px solid rgb(66, 44, 120);
+        font-size: 1.3em;
+        background-color: rgb(226, 236, 255);
+    }
+
+    li p {
+        font-size: 0.7em;
+    }
+
+    article ul, article ol{
+        list-style-position: inside initial;
+        padding-left: 50px;
+        padding-right: 30px;
+    }
+
+    ol#how li {
+        margin-left: -25px;
+    }
+
+    article#pro-css3 {
+        float: left;
+        width: 44%;
+        margin: 0;
+        padding: 0 30px;
+    }
+
+    article#pro-css3:nth-child(3) {
+        border-left: 1px solid rgb(66, 44, 120);
+    }
+
+    @media (max-width:1280px) {
+        article#pro-css3 {
+            float: none;
+            width: 90%;
+        }
+
+        article#pro-css3:nth-child(3) {
+            border-left: 0px solid rgb(66, 44, 120);
+        }
+
+    }
+
+    article#pro-css3 h4 ~ p {
+        border: 1px solid rgba(134, 86, 255, 0.306);
+        border-left: 4px solid rgb(110, 86, 171);
+        border-bottom: 4px solid rgb(110, 86, 171);
+        margin-left: 30px;
+        background-color: rgb(202, 230, 255);
+        border-bottom-right-radius: 30px;
+        box-shadow: inset -3px -2px rgb(253, 253, 253);
+    }
+
+    section#step article {
+        background-color: rgb(234, 244, 247);
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: 0 5px 5px 0 rgb(113, 113, 113);
+        margin-bottom: 30px;
+        border-top: 11px groove rgb(90, 203, 216);
+        padding-top: 10px;
+    }
+
+
+
+
+
+    /** Image Style **/
+
+    img#logo {
+        height: 100px;
+        padding-top: 25px;
+        float: left;
+    }
+
+    div.img-p {
+        padding: 0 13%;
+    }
+
+    iframe {
+        width: 60%;
+        margin: 0 20%;
+        margin-top: 20px;
+        border: 3px solid white;
+        box-shadow: 2px 2px 6px rgb(108, 107, 107);
+    }
+
+    @media (max-width:900px) {
+        iframe {
+            margin: 0 0;
+            width: 100%;
+            margin-top: 20px;
+        }   
+    }
+
+
+
+
+
+    /** Table Style **/
+
+
+    table#html5-element, th, td {
+        border: 1px solid black;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    table#html5-element {
+        width: 70%;
+        margin: 0 auto;
+        background-color: rgb(147, 172, 216);
+    }
+
+    table#html5-element th, table#html5-element td {
+        padding: 10px;
+        background-color: rgb(218, 248, 245);
+    }
+
+    table#t_article {
+        width: 100%;
+    }
+
+    /**/
+
+    table#t_result {
+        text-align: center;
+        vertical-align: middle;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 0.7em;
+        margin: auto;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table#t_result tr:first-child {
+        font-size: 1em;
+        background-color: rgb(52, 24, 123);
+        color: rgb(255, 255, 255);
+    }
+
+    table#t_result tr:not(:first-child) {
+        background-color: rgb(251, 250, 240);
+    }
+
+    table#t_result tr th:first-child {
+        width: 40%;
+        font-size: 1.5em;
+    }
+
+    table#t_result:not(:first-child) th, table#t_result tr td {
+        width: 30%;
+    }
+
+    table#t_result th, table#t_result td {
+        padding: 15px 15px;
+        border: 2px solid rgb(25, 35, 69);
+        font-size: 1.5em;
+    }
+
+    table#t_result td {
+        font-size: 2em;
+    }
+
+    td#sp {
+        text-align: right;
+        font-weight: 1.5em;
+    }
+
+
+
+
+
+
+    /** Form Style  **/
+
+    legend {
+        text-align: center;
+        background: rgb(40, 62, 199);
+        color: rgba(255, 255, 255, 0.912);
+        padding: 5px 20%;
+        border: 2px solid rgb(230, 250, 255);
+        border-radius: 15px;
+    }
+    
+    fieldset {
+        border-radius: 10px;
+    }
+
+    fieldset#fs1, fieldset#fs2, fieldset#fs3, fieldset#fs4 {
+        margin: 10px;
+        padding: 10px;
+        border: 2px dotted white;
+        background-image: linear-gradient(to bottom, rgba(217, 222, 250, 0.823), white);
+        box-shadow: 0 4px 1px gray;
+
+    }
+
+    fieldset#fs1 label, fieldset#fs2 label {
+        float: left;
+        clear: left;
+        font-size: 0.9em;;
+        text-align: right;
+        width: 40%;
+        vertical-align: top;
+        padding-right: 10px;
+        padding-bottom: 5px;
+    }
+
+    fieldset#fs1 input {
+        float: left;
+        font-size: 0.8em;
+        width: 30%;
+    }
+
+    fieldset#fs2 {
+        padding-left: 15%;
+    }
+
+    fieldset#fs2 input {
+        float: left;
+        width: 60px;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    fieldset#fs4 {
+        vertical-align: top;
+        text-align: center;
+    }
+
+    textarea {
+        padding: 5px 10px;
+        width: 80%;
+        margin: auto;
+    }
+
+        /*** radio adjust  ***/
+
+        fieldset#radio {
+            float: left;
+            padding: 0;
+            margin: 0;
+            width: 40%;
+            text-align: left;
+            border: none;
+        }
+
+        fieldset#radio input {
+            float: left;
+            clear: left;
+            width: 20px;
+            position: relative;
+            top: 3px;
+        }
+
+        fieldset#radio label {
+            float: left;
+            position: relative;
+            top: -19px;
+            left: 20px;
+            text-align: left;
+            width: 100%;
+            margin-bottom: -20px;
+        }
+
+        /*** button ***/
+
+        fieldset#fs5 {
+            text-align: center;
+            border: none;
+            padding: 0;
+        }
+
+        button {
+            width: 40%;
+            padding: 5px 10px;
+            font-size: 1em;
+            background-color: rgb(47, 47, 171);
+            color: white;
+            border-radius: 12px;
+        }
+
+        input#btn {
+            padding: 5px 5px;
+            width: 120px;
+            font-weight: bold;
+            background-color: rgb(68, 64, 182);
+            color: white;
+            border-radius: 5px;
+            margin-left: 5px;
+        }
+
+
+
+        /*** validation ***/
+        input {
+            background-color: lightyellow;
+            padding: 2px 5px;
+            margin-bottom: 8px;
+        }
+
+        input:valid {
+            background-color: lightgreen;
+        }
+
+        input:focus:invalid {
+            background-color: rgb(224, 127, 127);
+        }
+
+
+
+
+
+    /** About Style **/
+
+    body#aboutb {
+        min-width: 845px;
+    }
+
+    img#profile {
+        width: 70%;
+        border-radius: 100%;
+        border: 5px solid white;
+        box-shadow: 0 0 10px 2px rgb(196, 196, 196);
+        margin-bottom: 20px;
+    }
+
+    div.profile {
+        float: left;
+        width: 20%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .profile h5 {
+        font-size: 0.8em;
+        color: rgb(86, 17, 85);
+        padding: 5px 0;
+        border-top: 1px solid rgb(105, 10, 100);
+        border-bottom: 1px solid rgb(105, 10, 100);
+        border-radius: 10px;
+        background-color: rgb(197, 221, 241);
+    }
+
+    .profile p {
+        font-size: 0.9em;
+        padding-top: 10px;
+        font-family: Gabriola;
+        font-weight: bold;
+        font-size: 1em;
+        line-height: 1.2em;
+    }
+
+    div.imgd {
+        float: left;
+        width: 60%;
+        justify-content: center;
+        border-left: 2px solid rgb(24, 5, 84);
+        padding: 50px;
+        text-align: center;
+    }
+
+    figure {
+        padding: 10px 40px;
+    }
+
+    figure img {
+        width: 30%;
+        border: 3px solid white;
+        box-shadow: 0 10px 30px gray;
+        margin: 15px auto;
+    }
+
+    figure h3 {
+        background-color: rgb(182, 209, 255);
+        border-radius: 0;
+        color: rgb(42, 29, 118);
+    }
+
+    figcaption {
+        font-size: 0.7em;
+    }
+
+
+
+    
+
+    /** Diagram Style **/
+
+    section#dia {
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    section#dia img{
+        width: 60%;
+        background-color: rgb(227, 243, 243);
+        border-radius: 5px;
+        border: 3px solid white;
+        box-shadow: -3px 3px 7px rgb(35, 32, 56);
+        padding: 15px;
+        margin-top: 30px;
+        margin-bottom: 90px;
+    }
+
+    section#dia table {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    section#dia table td#empty{
+        width: 20%;
+        background-color: lightgrey;
+    }
+
+    section#dia #btn {
+        background-color: lightseagreen;
+    }
+
+    #emp {
+        background-color: lightgrey;
+    }
+
+    #emp2 {
+        background-color: lightsteelblue;
+        border: none;
+    }
+
+    #fs {
+        background-color: lightyellow;
+    }
+
+    #leg {
+        background-color: lightskyblue;
+    }
+
+    #lab {
+        background-color: lightgreen;
+    }
+
+    #inp {
+        background-color: lightsalmon;
+    }
+
+    #rad {
+        background-color: lightpink;
+    }
+
+    #tab {
+        background-color: rgb(236, 223, 149);
+    }
+
+    #ta {
+        background-color: rgb(255, 182, 248);
+    }
+
+    #hea, #foo {
+        background-color: lightslategrey;
+    }
+
+    section#dia #nav {
+        background-color: lightgoldenrodyellow;
+    }
+
+    #sec {
+        background-color: lightsteelblue;
+    }

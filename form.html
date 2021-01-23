@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Internet Application">
+        <meta name="keywords" content="html5, css, website hosting">
+        <meta name="author" content="Lui Zhi Heng">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form | Student Result</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        <script src="js/form.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="css.html">CSS</a></li>
+                    <li><a href="host.html">HOSTING</a></li>
+                    <li><a href="form.html">FORM</a></li>
+                    <li><a href="diagram.html">DIAGRAM</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <form name="forms" method="post">
+                <fieldset id="fs1">
+                    <legend>Student Information</legend>
+                
+                    <label for="s_name">Name</label>
+                    <input id="s_name" type="text" pattern="[a-zA-z]{3,}" oninvalid="f_invalid('Student name must contain at least 3 character\n')" required>
+
+                    <label for="s_id">ID</label>
+                    <input id="s_id" type="text" pattern="[BbDdTtEe9][a-zA-Z0-9]{7,9}" oninvalid="f_invalid('Student ID must contain 7-8 character and start with (B,D,E,T,9)\n')" required>
+
+                    <label for="s_genderm">Gender</label>
+                    <fieldset id="radio">
+                        <input id="s_genderm" name="s_gender" type="radio" required>
+                        <label for="s_genderm">Male</label>
+
+                        <input id="s_genderf" name="s_gender" type="radio">
+                        <label for="s_genderf">Female</label>
+                    </fieldset>
+    
+                    <label for="s_modep">Mode of Study</label>
+                    <fieldset id="radio">
+                        <input id="s_modep" name="s_mode" type="radio">
+                        <label for="s_modep">Part Time</label>
+
+                        <input id="s_modef" name="s_mode" type="radio">
+                        <label for="s_modef">Full Time</label>
+                    </fieldset>
+
+                    <label for="s_phone">Phone Number</label>
+                    <input id="s_phone" type="tel" pattern="[0-9-]{9,12}"  oninvalid="f_invalid('Phone number must contain at least 9 digits\n')" required>
+
+                    <label for="s_email">Email</label>
+                    <input id="s_email" type="email" pattern="[0-9a-zA-z@.]{16,42}"  oninvalid="f_invalid('Email must contain the @ character\n')" required>
+                </fieldset>
+
+                <fieldset id="fs2">
+                    <legend>Assessment Result Mark</legend>
+
+                    <label for="r_ass">Assignment</label>
+                    <input name="n_a" id="r_ass" value="" type="number" min="0" max="100" placeholder="0-100"  oninvalid="f_invalid('Assignment mark must contain number within range 1-100\n')" required>
+
+                    <label for="r_pro">Project</label>
+                    <input name="n_p" id="r_pro" value="" type="number" min="0" max="100"  placeholder="0-100" oninvalid="f_invalid('Project mark must contain number within range 1-100\n')" required>
+
+                    <label for="r_test">Test</label>
+                    <input name="n_t" id="r_test" value="" type="number" min="0" max="100"  placeholder="0-100" oninvalid="f_invalid('Test mark must contain number within range 1-100\n')" required>
+
+                    <label for="r_final">Final Exam</label>
+                    <input name="n_f" id="r_final" value="" type="number" min="0" max="100"  placeholder="0-100" oninvalid="f_invalid('Final Exam mark must contain number within range 1-100\n')" required>
+            
+                    <label></label>
+                    <input id="btn" type="button" value="Count" onclick="f_cal()">
+
+                </fieldset>
+
+                <fieldset id="fs3">
+                    <legend>Result</legend>
+
+                    <table id="t_result">
+                        <tr>
+                            <th>Assessment</th>
+                            <th>Mark Obtained in Assessment (%)</th>
+                            <th>Total Mark Obtained (%)</th>
+                        </tr>
+
+                        <tr>
+                            <th>Assignment<br>(10%)</th>
+                            <td name="n1_a" id="m1_a"></td>
+                            <td name="n2_a" id="m2_a"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Project<br>(30%)</th>
+                            <td name="n1_p" id="m1_p"></td>
+                            <td name="n2_p" id="m2_p"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Test<br>(25%)</th>
+                            <td name="n1_t" id="m1_t"></td>
+                            <td name="n2_t" id="m2_t"></td>
+                        </tr>
+                        
+                        <tr>
+                            <th>Final <br>(35%)</th>
+                            <td name="n1_f" id="m1_f"></td>
+                            <td name="n2_f" id="m2_f"></td>
+                        </tr>
+
+                        <tr>
+                            <td id="sp" colspan="2"><b>TOTAL</b></td>
+                            <td id="m_t" name="n_t"></td>
+                        </tr>
+
+                        <tr>
+                            <td id="sp" colspan="2"><b>GRADE</b></td>
+                            <td id="m_g" name="n_g"></td>
+                        </tr>
+                    </table>
+
+                </fieldset>
+
+                <fieldset id="fs4">
+                    <legend>Comment / Remark</legend>
+                    <textarea id="ta_cr" rows="10" placeholder="Write a comment here..."></textarea>
+                </fieldset>
+
+                <fieldset id="fs5">
+                    <button type="submit" onclick="f_check();">SUBMIT</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <footer>
+            Lui Zhi Heng &copy; 2020
+        </footer>
+    </body>
+</html>

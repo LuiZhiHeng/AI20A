@@ -1,0 +1,35 @@
+
+
+    html5 intro
+    =============
+    https://www.geeksforgeeks.org/html5-introduction/
+
+    css history
+    =============
+    https://en.wikipedia.org/wiki/Cascading_Style_Sheets
+
+
+    css3 advantage
+    ==============
+    https://www.geeksforgeeks.org/advantage-of-css3-over-css/
+
+    hosting
+    ==============
+    https://www.hostgator.in/blog/how-to-host-a-website-a-complete-guide-for-beginners/
+
+
+
+
+
+
+    Background Image
+    -------------------------
+    https://thumbs.dreamstime.com/b/software-development-seamless-pattern-flat-line-icons-programming-language-background-application-api-computer-software-169146803.jpg
+
+    html5
+    -----------------------
+    https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png
+
+    css3
+    -----------------------
+    https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png
